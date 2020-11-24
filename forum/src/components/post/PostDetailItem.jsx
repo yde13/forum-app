@@ -20,8 +20,6 @@ export default function PostDetailItem(props) {
     fetchDetailData()
   }, [])
 
-  console.log(detailData);
-
   return (
     <div>
       {detailData && (
@@ -57,7 +55,7 @@ export default function PostDetailItem(props) {
               <p>{detailData.isClosed && detailData.isClosed
                 == false ? 'Is Closed: Yes' : 'Is Closed: No'}</p>
               <p>{detailData.isPinned && detailData.isPinned
-                == false ? 'Is Pinned: Yes' : 'Is Pinned: No'}</p>
+                == true ? 'Is Pinned: Yes' : 'Is Pinned: No'}</p>
               <p>{detailData.userSubscribed && detailData.userSubscribed
                 == false ? 'Subscribed: Yes' : 'Subscribed: No'}</p>
             </div>
